@@ -72,23 +72,18 @@ function homePageClick(thisObj){
         $("#" + thisObj.title.replace(" ","_")).click();
     }
 
-	var value = (inWelcomePage==true)?0:100;
-	var hidden = (inWelcomePage==true)?"auto":"hidden";
+	var value = (inWelcomePage)?0:100;
+	var hidden = (inWelcomePage)?"auto":"hidden";
 	//$("body").css("overflow", hidden );
-
-     $('.mainBody').ready(function(){
-                  
-    
-
 	//$("#welcomeBlankInside").css("opacity",(value/100));
 	//$(".welcomeButtons").css("display","none");
 	$("#welcomeBlank").css("height",value + "%");
 	$("#banner").css("top",value + "%");
 	//$("#welcomeHolder").css("top",(-100 + value) + "%");
 
-	inWelcomePage = (inWelcomePage==true)?false:true;
 
-    });
+	inWelcomePage = (inWelcomePage)?false:true;
+    centerIndex = (inWelcomePage)?null:centerIndex;
 
 }
 
