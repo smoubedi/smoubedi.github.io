@@ -1,0 +1,153 @@
+.projectMainBody{
+ 
+    background: transparent;
+    margin-top: 10em;
+    //margin-bottom: 0;
+    
+}
+
+.header{
+    color: white;
+    height: 120px;
+    border-top: 0.2em solid #ffcc00;
+    
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    margin-top: 3em;
+}
+
+.header > .cornerTab{
+    position: relative;   
+    z-index: 0;
+}
+
+.header > h1{
+    
+    position: absolute;
+    left: 1.5em;
+    top: 0.1em;
+    font-size: 3.1em;
+}
+.header > h3{
+    
+    position: absolute;
+    left: 1.5em;
+    top: 1.5em; 
+    color: rgb(219, 215, 196);
+    font-size: 1.6em;
+
+}
+
+.projectBar{
+    
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 2em;
+    border-top: 0.1em solid #a78600;
+    position: relative;
+    
+}
+
+.projectBar:hover{
+    cursor: pointer;   
+}
+
+
+.projectBar>img{
+    width: 100%;   
+    position: absolute;
+    left: 7em;
+}
+
+
+.projectBar:after {
+    background-color: black;
+    width: 7em;
+    height: 200%;
+    position: absolute;
+    /* top: -5px; */
+    /* left: -5px; */
+    content: attr(title) '';
+    color: beige;
+    font-size: 1.3em;
+    line-height: 24px;
+    font-weight: 300;
+    padding: 1em 0 0 1em;
+    box-shadow: 3.0em -5em 110px #000;
+}
+
+
+
+
+
+
+
+#loading{
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 75px;
+    width: 75px;
+    //opacity: 0;
+    display: none;
+
+}
+
+
+#projectDetailsPage{
+    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+
+    background-color: rgba(255, 252, 247, 1);
+    z-index: 500;
+    //transition: left 0.7s;
+   //overflow: auto;
+}
+
+
+.close {
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 34px;
+    margin: 0.5em;
+    z-index: 600;
+
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    text-decoration: none;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-family: "Courier New", "Lucida Sans Unicode" , sans-serif, arial;
+}
+.close:hover {
+    color: #000000;
+    text-decoration: none;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    cursor: pointer;
+}
+#project-ajaxLoader{
+
+    height: 100%;
+    overflow: auto;
+}
+
