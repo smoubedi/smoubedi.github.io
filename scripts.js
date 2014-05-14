@@ -68,20 +68,27 @@ function navsFunction(thisObj){
 
 function homePageClick(thisObj){
 
+    if(thisObj!=null){
+        $("#" + thisObj.title.replace(" ","_")).click();
+    }
+
 	var value = (inWelcomePage==true)?0:100;
 	var hidden = (inWelcomePage==true)?"auto":"hidden";
 	//$("body").css("overflow", hidden );
+
+    $('.ajaxLoader').load(function(){
+                  
+    
 
 	//$("#welcomeBlankInside").css("opacity",(value/100));
 	//$(".welcomeButtons").css("display","none");
 	$("#welcomeBlank").css("height",value + "%");
 	$("#banner").css("top",value + "%");
 	//$("#welcomeHolder").css("top",(-100 + value) + "%");
-	if(thisObj!=null){
-		$("#" + thisObj.title.replace(" ","_")).click();
-	}
 
 	inWelcomePage = (inWelcomePage==true)?false:true;
+
+    });
 
 }
 
