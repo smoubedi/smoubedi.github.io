@@ -76,7 +76,7 @@ function homePageClick(thisObj){
 	var hidden = (inWelcomePage==true)?"auto":"hidden";
 	//$("body").css("overflow", hidden );
 
-    $('.ajaxLoader').load(function(){
+     $('.mainBody').ready(function(){
                   
     
 
