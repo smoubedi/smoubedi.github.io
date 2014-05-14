@@ -72,19 +72,21 @@ function homePageClick(thisObj){
         $("#" + thisObj.title.replace(" ","_")).click();
     }
 
-	var value = (inWelcomePage)?0:100;
-	var hidden = (inWelcomePage)?"auto":"hidden";
-	//$("body").css("overflow", hidden );
-	//$("#welcomeBlankInside").css("opacity",(value/100));
-	//$(".welcomeButtons").css("display","none");
-	$("#welcomeBlank").css("height",value + "%");
-	$("#banner").css("top",value + "%");
-	//$("#welcomeHolder").css("top",(-100 + value) + "%");
 
-
-	inWelcomePage = (inWelcomePage)?false:true;
-    centerIndex = (inWelcomePage)?null:centerIndex;
-
+	$('img, video').load(function(){
+		var value = (inWelcomePage)?0:100;
+		var hidden = (inWelcomePage)?"auto":"hidden";
+		//$("body").css("overflow", hidden );
+		//$("#welcomeBlankInside").css("opacity",(value/100));
+		//$(".welcomeButtons").css("display","none");
+		$("#welcomeBlank").css("height",value + "%");
+		$("#banner").css("top",value + "%");
+		//$("#welcomeHolder").css("top",(-100 + value) + "%");
+	
+	
+		inWelcomePage = (inWelcomePage)?false:true;
+	    	centerIndex = (inWelcomePage)?null:centerIndex;
+	});
 }
 
 function updateNavBar(thisObj){
