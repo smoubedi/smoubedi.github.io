@@ -73,7 +73,7 @@ function homePageClick(thisObj){
     }
 
 
-	$('img, video').load(function(){
+	//$('img, video').load(function(){
 		var value = (inWelcomePage)?0:100;
 		var hidden = (inWelcomePage)?"auto":"hidden";
 		//$("body").css("overflow", hidden );
@@ -86,7 +86,7 @@ function homePageClick(thisObj){
 	
 		inWelcomePage = (inWelcomePage)?false:true;
 	    	centerIndex = (inWelcomePage)?null:centerIndex;
-	});
+	//});
 }
 
 function updateNavBar(thisObj){
