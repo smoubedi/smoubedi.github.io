@@ -85,7 +85,7 @@ function homePageClick(thisObj){
 	
 	
 		inWelcomePage = (inWelcomePage)?false:true;
-	    	centerIndex = (inWelcomePage)?null:centerIndex;
+	    centerIndex = (inWelcomePage)?null:centerIndex;
 	//});
 }
 
@@ -96,7 +96,7 @@ function updateNavBar(thisObj){
     $(thisObj).css('color', 'rgb(209, 155, 0)');
     
     var left = $(thisObj).offset().left;
-    var right = $(window).width() - left - $("#bannerInner").css('marginRight').replace("px", "");
+    var right = $(window).width() - left - $("#bannerInner").offset().left;
     
     var width = $(thisObj).outerWidth();
     
