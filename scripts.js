@@ -8,6 +8,8 @@ var centerIndex=null;
 var leftIndex=null;
 var rightIndex=null;
 
+var easing = 'swing';
+
 $(window).load(function(){
     
     $(".navs").attr("onclick","navsFunction(this)");
@@ -225,8 +227,8 @@ function swapPages(nextPagePosition){
     var prevOffset = nextPageDOM.style.left;
     var prevPosition = nextPagePosition; 
 
-    $(nextPageDOM).animate({left: $(origPageDOM).css('left') },700);
-    $(origPageDOM).animate({left: $(unusedPageDOM).css('left') },700);
+    $(nextPageDOM).animate({left: $(origPageDOM).css('left') },700, easing);
+    $(origPageDOM).animate({left: $(unusedPageDOM).css('left') },700, easing);
 
     setTimeout(function() {  
 
