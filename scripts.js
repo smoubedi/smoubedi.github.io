@@ -228,9 +228,7 @@ function swapPages(nextPagePosition){
     var prevPosition = nextPagePosition; 
 
     $(nextPageDOM).animate({left: $(origPageDOM).css('left') },700, easing);
-    $(origPageDOM).animate({left: $(unusedPageDOM).css('left') },700, easing);
-
-    setTimeout(function() {  
+    $(origPageDOM).animate({left: $(unusedPageDOM).css('left') },700, easing , function(){  
 
         unusedPageDOM.style.zIndex = "0";
         unusedPageDOM.style.left = prevOffset;
@@ -246,5 +244,5 @@ function swapPages(nextPagePosition){
             siteBusy = false;
         },20);
 
-    },700)   
+    }); 
 }
