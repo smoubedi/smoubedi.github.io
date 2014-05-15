@@ -251,7 +251,7 @@ function swapPages(nextPagePosition){
 }
 
 
-function swapPagesNoLoad(nextPagePosition){
+function swapPagesNoLoadORIG(nextPagePosition){
     
     $(".ajaxLoader").css("overflow","hidden");
     
@@ -282,6 +282,39 @@ function swapPagesNoLoad(nextPagePosition){
 
         setTimeout(function() { 
             $(".ajaxLoader").css({"transition":prevTransition , "overflow":"auto"});
+            siteBusy = false;
+        },20);
+
+    },700)   
+}
+
+function swapPagesNoLoad(nextPagePosition){
+    
+    $(".ajaxLoader").css("overflow","hidden");
+    
+    var nextPageDOM = document.getElementById(nextPagePosition);
+    var origPageDOM = document.getElementById("centerPage");
+    var unusedPageDOM = (nextPagePosition=="rightPage")?document.getElementById("leftPage"):document.getElementById("rightPage");
+
+    var prevOffset = nextPageDOM.style.left;
+    var prevPosition = nextPagePosition; 
+
+    $(nextPageDOM).animate({left: origPageDOM.style.left },700);
+    $(origPageDOM).animate({left: unusedPageDOM.style.left },700);
+
+    setTimeout(function() {  
+
+        unusedPageDOM.style.zIndex = "0";
+        unusedPageDOM.style.left = prevOffset;
+        unusedPageDOM.style.zIndex = "1";
+
+
+        nextPageDOM.id = origPageDOM.id;
+        origPageDOM.id = unusedPageDOM.id;
+        unusedPageDOM.id = prevPosition;
+
+        setTimeout(function() { 
+            $(".ajaxLoader").css({"overflow":"auto"});
             siteBusy = false;
         },20);
 

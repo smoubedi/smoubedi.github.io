@@ -164,7 +164,7 @@ p{
         height: 100%;
         display: inline-block;
         position: absolute;
-        transition: left 0.7s;
+        // transition: left 0.7s;
         z-index: 1;
         overflow-x: hidden;
         
