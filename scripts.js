@@ -239,10 +239,9 @@ function swapPages(nextPagePosition){
         origPageDOM.id = unusedPageDOM.id;
         unusedPageDOM.id = prevPosition;
 
-        setTimeout(function() { 
+
             $(".ajaxLoader").css({"overflow":"auto"});
             siteBusy = false;
-        },20);
 
     }); 
 }
