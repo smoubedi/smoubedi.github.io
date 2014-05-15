@@ -192,13 +192,13 @@ function switchPage(thisObj){
       case "rightPage_NOLOAD":
             
         siteBusy = true;
-        swapPagesNoLoad("rightPage");
+        swapPages("rightPage");
         break;
             
       case "leftPage_NOLOAD":
             
         siteBusy = true;
-        swapPagesNoLoad("leftPage");
+        swapPages("leftPage");
         break;
             
       case "centerPage":
@@ -213,82 +213,8 @@ function switchPage(thisObj){
     }    
 }
 
+
 function swapPages(nextPagePosition){
-    
-    $(".ajaxLoader").css("overflow","hidden");
-    
-    var nextPageDOM = document.getElementById(nextPagePosition);
-    var origPageDOM = document.getElementById("centerPage");
-    var unusedPageDOM = (nextPagePosition=="rightPage")?document.getElementById("leftPage"):document.getElementById("rightPage");
-
-    var prevOffset = nextPageDOM.style.left;
-    var prevPosition = nextPagePosition; 
-
-    nextPageDOM.style.left = origPageDOM.style.left;
-    origPageDOM.style.left = unusedPageDOM.style.left;
-
-    var prevTransition = $(".ajaxLoader").css("transition");
-
-    setTimeout(function() {  
-
-        $(".ajaxLoader").css("transition","left 0s");
-
-        unusedPageDOM.style.zIndex = "0";
-        unusedPageDOM.style.left = prevOffset;
-        unusedPageDOM.style.zIndex = "1";
-
-
-        nextPageDOM.id = origPageDOM.id;
-        origPageDOM.id = unusedPageDOM.id;
-		unusedPageDOM.id = prevPosition;
-
-        setTimeout(function() { 
-            $(".ajaxLoader").css({"transition":prevTransition , "overflow":"auto"});
-            siteBusy = false;
-        },20);
-
-    },700)   
-}
-
-
-function swapPagesNoLoadORIG(nextPagePosition){
-    
-    $(".ajaxLoader").css("overflow","hidden");
-    
-    var nextPageDOM = document.getElementById(nextPagePosition);
-    var origPageDOM = document.getElementById("centerPage");
-    var unusedPageDOM = (nextPagePosition=="rightPage")?document.getElementById("leftPage"):document.getElementById("rightPage");
-
-    var prevOffset = nextPageDOM.style.left;
-    var prevPosition = nextPagePosition; 
-
-    nextPageDOM.style.left = origPageDOM.style.left;
-    origPageDOM.style.left = unusedPageDOM.style.left;
-
-    var prevTransition = $(".ajaxLoader").css("transition");
-
-    setTimeout(function() {  
-
-        $(".ajaxLoader").css("transition","left 0s");
-
-        unusedPageDOM.style.zIndex = "0";
-        unusedPageDOM.style.left = prevOffset;
-        unusedPageDOM.style.zIndex = "1";
-
-
-        nextPageDOM.id = origPageDOM.id;
-        origPageDOM.id = unusedPageDOM.id;
-		unusedPageDOM.id = prevPosition;
-
-        setTimeout(function() { 
-            $(".ajaxLoader").css({"transition":prevTransition , "overflow":"auto"});
-            siteBusy = false;
-        },20);
-
-    },700)   
-}
-
-function swapPagesNoLoad(nextPagePosition){
     
     $(".ajaxLoader").css("overflow","hidden");
     
