@@ -43,6 +43,8 @@ bottom: 30%;
     z-index:600; 
     display: inline-block;
     transition: opacity 0.3s;
+    filter: grayscale(100%);
+    transition: .2s ease-in-out;
     -webkit-filter: grayscale(100%);
     -webkit-transition: .2s ease-in-out;
     -moz-filter: grayscale(100%); 
@@ -53,6 +55,8 @@ bottom: 30%;
 
 .welcomeButtons:hover{
     cursor: pointer;
+    filter: grayscale(0%);
+    transition: .2s ease-in-out;
     -webkit-filter: grayscale(0%);
     -webkit-transition: .2s ease-in-out;
     -moz-filter: grayscale(0%);
@@ -78,6 +82,11 @@ bottom: 30%;
 }
 #allWelcomeButtons li{
     display: inline-block;
-    padding: 68px;
+    padding: 38px;
+    
+}
+#allWelcomeButtons img{
+    display: inline-block;
+    padding: 30px;
     
 }
