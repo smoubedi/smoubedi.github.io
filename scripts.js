@@ -13,12 +13,11 @@ var easing = 'swing';
 $(window).load(function(){
     
     $(".navs").attr("onclick","navsFunction(this)");
-    $('#HOME').attr("onclick", "homePageClick(null); navsFunction(this);")
-    //navsFunction(document.getElementById("HOME"));
-   
-  
-    
+    $('#HOME').attr("onclick", "homePageClick(null); navsFunction(this);"); 
 });
+
+
+
 
 
 
@@ -48,46 +47,37 @@ $( document ).on('click', '.projectBar', function(event) {
                     $( "#projectDetailsPage" ).animate({left: "0%"}, 700);
                 });
             }
-    });
-
-    
-    
-    
+    });  
 });
-    
-    
-    
-    
-function navsFunction(thisObj){
-    
+     
+
+
+
+
+function navsFunction(thisObj){   
     if(!siteBusy){
         updateNavBar(thisObj);
         switchPage(thisObj);
-    }
-    
+    }   
 }
-
-
 function homePageClick(thisObj){
 
     if(thisObj!=null){
         $("#" + thisObj.title.replace(" ","_")).click();
     }
-
-
 	//$('img, video').load(function(){
-		var value = (inWelcomePage)?0:100;
-		var hidden = (inWelcomePage)?"auto":"hidden";
-		//$("body").css("overflow", hidden );
-		//$("#welcomeBlankInside").css("opacity",(value/100));
-		//$(".welcomeButtons").css("display","none");
-		$("#welcomeBlank").css("height",value + "%");
-		$("#banner").css("top",value + "%");
-		//$("#welcomeHolder").css("top",(-100 + value) + "%");
-	
-	
-		inWelcomePage = (inWelcomePage)?false:true;
-	    centerIndex = (inWelcomePage)?null:centerIndex;
+	var value = (inWelcomePage)?0:100;
+	var hidden = (inWelcomePage)?"auto":"hidden";
+	//$("body").css("overflow", hidden );
+	//$("#welcomeBlankInside").css("opacity",(value/100));
+	//$(".welcomeButtons").css("display","none");
+	$("#welcomeBlank").css("height",value + "%");
+	$("#banner").css("top",value + "%");
+	//$("#welcomeHolder").css("top",(-100 + value) + "%");
+
+
+	inWelcomePage = (inWelcomePage)?false:true;
+    centerIndex = (inWelcomePage)?null:centerIndex;
 	//});
 }
 
@@ -106,6 +96,10 @@ function updateNavBar(thisObj){
     var triangleWidth = $('#triangle').outerWidth();
     $("#triangle").css("right", midPoint-(triangleWidth/2) );    
 }
+
+
+
+
 
 function getNextPagePosition(thisObj){
     //if home, do soemmthing
@@ -234,14 +228,11 @@ function swapPages(nextPagePosition){
         unusedPageDOM.style.left = prevOffset;
         unusedPageDOM.style.zIndex = "1";
 
-
         nextPageDOM.id = origPageDOM.id;
         origPageDOM.id = unusedPageDOM.id;
         unusedPageDOM.id = prevPosition;
 
-
-            $(".ajaxLoader").css({"overflow":"auto"});
-            siteBusy = false;
-
+        $(".ajaxLoader").css({"overflow":"auto"});
+        siteBusy = false;
     }); 
 }
