@@ -192,13 +192,13 @@ function switchPage(thisObj){
       case "rightPage_NOLOAD":
             
         siteBusy = true;
-        swapPages("rightPage");
+        swapPagesNoLoad("rightPage");
         break;
             
       case "leftPage_NOLOAD":
             
         siteBusy = true;
-        swapPages("leftPage");
+        swapPagesNoLoad("leftPage");
         break;
             
       case "centerPage":
