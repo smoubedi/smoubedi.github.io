@@ -232,6 +232,12 @@ function swapPages(nextPagePosition){
         origPageDOM.id = unusedPageDOM.id;
         unusedPageDOM.id = prevPosition;
 
+        $('#rightPage').css('left','calc(2/3 * 100%)')
+        $('#centerPage').css('left','calc(1/3 * 100%)')
+        $('#leftPage').css('left','0%')
+
+
+
         $(".ajaxLoader").css({"overflow":"auto"});
         siteBusy = false;
     }); 
