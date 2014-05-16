@@ -1,16 +1,4 @@
-::-webkit-scrollbar {
-    width: 12px;
-}
-::-webkit-scrollbar-track {
-    background-color: #eaeaea;
-    border-left: transparent;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-}
-::-webkit-scrollbar-thumb:hover {
-	background-color: #aaa;
-}
+
 
 html, body { 
 height:100%; 
@@ -50,7 +38,7 @@ body{
     height: 0px;
     border-style: solid;
     border-width: 5em 5em 0 0;
-    border-color: #ffcc00 transparent transparent transparent;
+    border-color: gold transparent transparent transparent;
     top:0;
     left: 0;
     position: absolute;
@@ -107,7 +95,7 @@ h1{
 }
 h3{
     font-weight: 300; 
-    color: rgb(209, 155, 0);
+    color: goldenrod;
     font-size: 1.2em;
     margin: 0;
 }

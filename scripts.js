@@ -85,7 +85,7 @@ function updateNavBar(thisObj){
 
     //color the link orange
     $('a').css('color', 'inherit');
-    $(thisObj).css('color', 'rgb(209, 155, 0)');
+    $(thisObj).css('color', 'goldenrod');
     
     var left = $(thisObj).offset().left;
     var right = $(window).width() - left - $("#bannerInner").offset().left;
