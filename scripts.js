@@ -236,6 +236,8 @@ function swapPages(nextPagePosition){
         $('#centerPage').css('left','calc(1/3 * 100%)')
         $('#leftPage').css('left','0%')
 
+        $('.ajaxLoader').scrollTop();
+
 
 
         $(".ajaxLoader").css({"overflow":"auto"});
