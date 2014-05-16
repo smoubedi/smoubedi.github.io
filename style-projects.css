@@ -9,7 +9,7 @@
 .header{
     color: white;
     height: 120px;
-    border-top: 0.2em solid #ffcc00;
+    border-top: 0.2em solid gold;
     
     width: 940px;
     margin-left: auto;
@@ -49,7 +49,7 @@
     height: 150px;
     overflow: hidden;
     margin-bottom: 2em;
-    border-top: 0.1em solid #a78600;
+    border-top: 0.1em solid goldenrod;
     position: relative;
     
 }
