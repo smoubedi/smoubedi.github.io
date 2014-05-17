@@ -160,7 +160,7 @@ function getNextPagePosition(thisObj){
 
 function switchPage(thisObj){
     
-    var nextPageURL = "./" + thisObj.id + ".html";
+    var nextPageURL = "./MainPages/" + thisObj.id + ".html";
     var nextPagePosition = getNextPagePosition(thisObj);
     
     switch (nextPagePosition) {
