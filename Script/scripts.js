@@ -19,6 +19,23 @@ $(window).load(function(){
 
 
 
+$(document).on('click','.at4-arrow',function(event){
+
+    var target = $(event.target);
+    if(target.title == 'Hide'){
+
+        $('#at4-share').removeClass('slideInLeft at4-show').addClass('slideOutLeft at4-hide');
+
+    }
+    else{
+
+        $('#at4-share').removeClass('slideOutLeft at4-hide').addClass('slideInLeft at4-show');
+
+    }
+});
+
+
+
 
 
 $( document ).on('click', 'span.close', function(event) {
