@@ -30,7 +30,13 @@ span.at300bs.at15nc.at15t_skype {
 background-position: 0 -832px!important;
 }
 
-
+#at4-sccc{
+    opacity: 0;
+    transition: opacity 200ms;
+}
+#at4-sccc:hover{
+    opacity:1;
+}
 
 
 
