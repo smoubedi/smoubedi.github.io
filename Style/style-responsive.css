@@ -50,14 +50,9 @@
 }
 
 @media all and (max-width:820px) { 
-	.mainBody{
+	#project-ajaxLoader > .mainBody{
 
 		width:100%;
-	}
-
-	.mainBody:not(#project-ajaxLoader > .mainBody){
-
-		margin-top:0;
 	}
 
 	
