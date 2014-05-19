@@ -10,6 +10,8 @@ var rightIndex=null;
 
 var easing = 'swing';
 
+$.backstretch("http://dl.dropbox.com/u/515046/www/garfield-interior.jpg");
+
 $(window).load(function(){
     
     $(".navs").attr("onclick","navsFunction(this)");
