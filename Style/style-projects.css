@@ -156,3 +156,8 @@
     overflow: auto;
 }
 
+#project-ajaxLoader img, video{
+    max-width: 100%;
+    max-height: 100%;
+}
+
