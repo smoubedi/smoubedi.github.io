@@ -57,6 +57,13 @@ $(document).keydown(function(e) {
             navs[index].click();
         }
     }
+    else{
+
+        if(e.keyCode == 39){
+
+            $('.navs')[0].click();
+        }
+    }
 });
 
 
