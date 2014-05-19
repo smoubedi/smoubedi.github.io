@@ -55,8 +55,7 @@
 		width:100%;
 	}
 
-	.width-hunnid:not(#project-ajaxLoader > .width-hunnid){
-
+	.ajaxLoader > width-hunnid{
 		margin-top:0;
 	}
 
