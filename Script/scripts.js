@@ -29,10 +29,7 @@ $(document).on('click','.at4-arrow',function(event){
              $('#at4-share').removeClass('slideInLeft at4-show').addClass('slideOutLeft at4-hide');
              $('.atss-left').css('left','0');  
         });
-
-        $('#at4-share').removeClass('slideInLeft at4-show').addClass('slideOutLeft at4-hide');
-      //  $('#at4-soc').css({display : "block!important",opacity: "1!important"});
-    }
+     }
     else{
 
         $('#at4-share').removeClass('slideOutLeft at4-hide').addClass('slideInLeft at4-show');
