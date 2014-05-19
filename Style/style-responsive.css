@@ -17,3 +17,17 @@
 	}
 
 }
+
+
+@media all and (max-width:1140px) { 
+	.header{
+		width:85%;
+	}
+}
+
+
+@media all and (max-width:999px) { 
+	.projectMainBody{
+		width: calc(100% - 190px);
+	}
+}

@@ -3,7 +3,11 @@
     background: transparent;
     margin-top: 10em;
     //margin-bottom: 0;
-    
+
+    position: absolute;
+    left: 0;
+    right: 0;
+        
 }
 
 .header{
@@ -15,8 +19,8 @@
     margin-left: auto;
     margin-right: auto;
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 6.5em;
+    right: 6.5em;
     z-index: 100;
     margin-top: 3em;
 }
