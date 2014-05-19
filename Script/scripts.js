@@ -39,6 +39,28 @@ $(document).on('click','.at4-arrow',function(event){
 
 
 
+$(document).keydown(function(e) {
+  
+    if(!inWelcomePage){
+
+        var navs = $('.navs');
+          
+          if(e.keyCode == 37) { // left
+           var index = centerIndex - 1;
+          }
+
+          else if(e.keyCode == 39) { // right
+            var index = centerIndex + 1;
+          }
+
+          if(navs[index]){
+            navs[index].click();
+        }
+    }
+});
+
+
+
 
 
 $( document ).on('click', 'span.close', function(event) {
