@@ -1,3 +1,9 @@
+@media all and (max-width:540px) { 
+	body{
+		width: 540px;
+	}
+}
+
 @media all and (max-width:800px) { 
 
 
