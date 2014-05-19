@@ -14,6 +14,8 @@ $(window).load(function(){
     
     $(".navs").attr("onclick","navsFunction(this)");
     $('#HOME').attr("onclick", "homePageClick(null); navsFunction(this);"); 
+
+    $('#at4-scc').unbind('click');
 });
 
 
