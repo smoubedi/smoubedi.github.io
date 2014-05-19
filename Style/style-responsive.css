@@ -24,6 +24,15 @@
 
 }
 
+@media all and (max-width:580px) { 
+	#welcomeBlankInside{
+		width:120%;
+
+	}
+
+	
+}
+
 
 @media all and (max-width:1120px) { 
 	.header{
@@ -63,7 +72,7 @@
 }
 
 
-@media all and (max-width:550px) { 
+@media all and (max-width:540px) { 
 	#fullLogo{
 		display:none;
 
