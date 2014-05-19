@@ -61,7 +61,7 @@ $(document).keydown(function(e) {
 
         if(e.keyCode == 39){
 
-            $('.navs')[1].click();
+            $('.welcomeButtons')[0].click();
         }
     }
 });
