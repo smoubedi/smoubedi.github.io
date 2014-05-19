@@ -24,7 +24,7 @@ $(document).on('click','.at4-arrow',function(event){
     var target = $(event.target);
     if(event.target.title == 'Hide'){
 
-        $('#at4-soc').css('left',initial);
+        $('#at4-soc').css('left','initial');
         $('.atss-left').animate({left:'-50px'},300,function(){
 
              $('#at4-share').removeClass('slideInLeft at4-show').addClass('slideOutLeft at4-hide');
