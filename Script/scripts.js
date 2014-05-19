@@ -89,7 +89,7 @@ $( document ).on('click', 'span.close', function(event) {
 $( document ).on('click', '.projectBar', function(event) {
 
     var target = $(event.target).closest('.projectBar');
-    var nextPageURL = "./Projects/" + target.attr('title').split(' ').join('_') + '.html';
+    var nextPageURL = "./Projects/" + target.attr('title').split(' ').join('_') + '/project.html';
     
     $('#loading').css({display:'inherit'});
     $('#project-ajaxLoader').load(nextPageURL, function(garbage, status, xhr ) {
