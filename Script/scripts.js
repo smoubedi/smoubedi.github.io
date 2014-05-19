@@ -24,6 +24,12 @@ $(document).on('click','.at4-arrow',function(event){
     var target = $(event.target);
     if(event.target.title == 'Hide'){
 
+        $('.atss-left').animate({left:'-50px'},500,function(){
+
+             $('#at4-share').removeClass('slideInLeft at4-show').addClass('slideOutLeft at4-hide');
+             $('.atss-left').css('left','0'};  
+        });
+
         $('#at4-share').removeClass('slideInLeft at4-show').addClass('slideOutLeft at4-hide');
       //  $('#at4-soc').css({display : "block!important",opacity: "1!important"});
     }
