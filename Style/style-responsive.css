@@ -19,9 +19,9 @@
 }
 
 
-@media all and (max-width:1140px) { 
+@media all and (max-width:1120px) { 
 	.header{
-		width:85%;
+		width: calc(100% - 168px);
 	}
 }
 
