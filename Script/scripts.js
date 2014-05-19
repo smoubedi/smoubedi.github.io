@@ -38,7 +38,17 @@ $(document).on('click','.at4-arrow',function(event){
 });
 
 
-
+$(document).swipe({
+  swipeLeft:function(event, direction, distance, duration, fingerCount) {
+    //This only fires when the user swipes left
+    if(!inWelcomePage){
+        var index = centerIndex - 1;
+        if(index >=0){
+            $('.navs')[index].click();
+        }
+    }
+  }
+});
 
 
 $( document ).on('click', 'span.close', function(event) {
