@@ -13,13 +13,12 @@
             <br><br>
             <a class="fancybox" rel="group" href="/Projects/DC_POWER_SUPPLY/Images/psu-front.jpg"><img src="/Projects/DC_POWER_SUPPLY/Images/psu-front-thumb.jpg"></a>
             <br><br>
-            The circuit design incorporates an amplifier with a variable band pass filter. At its tightest settings, the circuit will only respond to audio frequencies from 7Hz to 200Hz. This ensures that the lights only blink to the bass of the music which is essentially its tempo. At its loosest setting, the highest passing frequence it accepts is ~17 kHz which is around the limit of the human ear. This range is useful for listening to treble heavy music such as classical or vocals.
+            The voltage regulation is done via three LM 317T voltage regulator packages, two of which are set permanetly to 3.3V and 5V and used for VGA power, and one with a potentiometer for varying output. 
             <br><br>
-            The high pass filter as well as a full wave rectifier and capacitors are used to remove the very low frequencies less than 7 Hz. These frequencies will simply cause the LED's to blink which is unfavourable.
-            <br><br>
-            The power supply is a regulated 12 volt power adapter rated for 5 Watts which is then split to +/- 6V, and the input can use various audio channels. The circuit has  3 modes of operation: Off, Sound Reactive, Constant On. 
+            The voltage is then displayed via seven segment displays which are controlled through a PIC microcontroller. Finally, in order for the ATX supply to function, there must be a constant load recognized by the internal circuitry.
             <br><br>
             <a class="fancybox" rel="group" href="/Projects/DC_POWER_SUPPLY/Images/psu-circuit.jpg"><img src="/Projects/DC_POWER_SUPPLY/Images/psu-circuit-thumb.jpg"></a>
+            <a class="fancybox" rel="group" href="/Projects/DC_POWER_SUPPLY/Images/voltage_reg.jpg"><img src="/Projects/DC_POWER_SUPPLY/Images/voltage_reg.jpg"></a>
             <br><br>
            
         </p>
