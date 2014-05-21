@@ -2,6 +2,7 @@
 
 //GLOBAL
 var inWelcomePage = true;
+var inProjectPage = false;
 var siteBusy = false;
 
 var centerIndex=null;
@@ -49,7 +50,7 @@ $(document).on('click','.at4-arrow',function(event){
 
 $(document).keydown(function(e) {
   
-    if(!inWelcomePage){
+    if(!inWelcomePage && !inProjectPage){
 
         var navs = $('.navs');
           
@@ -82,11 +83,14 @@ $( document ).on('click', 'span.close', function(event) {
         
     $( "#projectDetailsPage" ).animate({left: "100%"}, 700, function() {
         $( "#project-ajaxLoader" ).empty();
+        inProjectPage = false;
     });
     
 });
 
 $( document ).on('click', '.projectBar', function(event) {
+
+    inProjectPage = true;
 
     var target = $(event.target).closest('.projectBar');
     var nextPageURL = "./Projects/" + target.attr('title').split(' ').join('_') + '/project.html';
