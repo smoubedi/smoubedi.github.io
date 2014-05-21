@@ -65,8 +65,8 @@
 
 
 .projectBar>img{
-    max-width: 90%;
-    max-height: 400%;
+    max-width: calc(100% - 7em);
+    min-height: 100%;
     position: absolute;
     left: 7em;
     top: 0;
