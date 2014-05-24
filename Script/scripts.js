@@ -25,7 +25,7 @@ $(window).load(function(){
 
 
 
-$('#at4-share').on('hover', function(){
+$('#at4-share').hover( function(){
     $('#at4-sccc').css('opacity', 1);
 });
 
