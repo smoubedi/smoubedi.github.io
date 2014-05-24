@@ -25,6 +25,12 @@ $(window).load(function(){
 
 
 
+$('#at4-share').on('hover', function(){
+    $('#at4-sccc').css('opacity', 1);
+});
+
+
+
 
 $(document).on('click','.at4-arrow',function(event){
 
