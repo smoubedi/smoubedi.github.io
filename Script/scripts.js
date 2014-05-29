@@ -72,11 +72,25 @@ $(document).keydown(function(e) {
             navs[index].click();
         }
     }
-    else{
+    else if(inWelcomePage && !inProjectPage){
 
         if(e.keyCode == 39){
 
             $('.welcomeButtons')[0].click();
+        }
+    }
+
+    if (e.keyCode == 8 || e.keyCode==27 || e.keyCode==35 || e.keyCode==36) {
+        e.preventDefault();
+        
+        if(inProjectPage){
+            $('span.close').click();
+        }
+        if(!inProjectPage && !inWelcomePage){
+            $('.navs')[0].click();
+        }
+        if(inWelcomePage){
+            window.history.back();
         }
     }
 });

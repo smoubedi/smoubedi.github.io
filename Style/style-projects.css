@@ -5,8 +5,9 @@
     //margin-bottom: 0;
 
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 6.5em;
+    right: 6.5em;
+    min-width: 300px;
         
 }
 
@@ -23,6 +24,7 @@
     right: 6.5em;
     z-index: 100;
     margin-top: 3em;
+    min-width: 300px;
 }
 
 .header > .cornerTab{
