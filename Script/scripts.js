@@ -29,7 +29,9 @@ $('#at4-share').hover( function(){
     $('#at4-sccc').css('opacity', 1);
 });
 
-
+/*window.onbeforeunload = function(e) {
+   return "The back button will force you to leave the website.";
+};*/
 
 
 $(document).on('click','.at4-arrow',function(event){
