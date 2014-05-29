@@ -83,15 +83,16 @@ $(document).keydown(function(e) {
     if (e.keyCode == 8 || e.keyCode==27 || e.keyCode==35 || e.keyCode==36) {
         e.preventDefault();
         
+        if(inWelcomePage){
+            window.history.back();
+        }
         if(inProjectPage){
             $('span.close').click();
         }
         if(!inProjectPage && !inWelcomePage){
             $('.navs')[0].click();
         }
-        if(inWelcomePage){
-            window.history.back();
-        }
+
     }
 });
 
