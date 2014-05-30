@@ -9,6 +9,8 @@ var centerIndex=null;
 var leftIndex=null;
 var rightIndex=null;
 
+var projectIndex = null;
+
 var easing = 'swing';
 
 
@@ -58,29 +60,77 @@ $(document).on('click','.at4-arrow',function(event){
 
 $(document).keydown(function(e) {
   
-    if(!inWelcomePage && !inProjectPage){
+    if(!inWelcomePage && !inProjectPage){                   //in main page
 
         var navs = $('.navs');
           
-          if(e.keyCode == 37) { // left
+        if(e.keyCode == 37) { // left
            var index = centerIndex - 1;
-          }
 
-          else if(e.keyCode == 39) { // right
-            var index = centerIndex + 1;
-          }
-
-          if(navs[index]){
+           if(navs[index]){
             navs[index].click();
+            }
+        }
+
+        else if(e.keyCode == 39) { // right
+            var index = centerIndex + 1;
+
+            if(navs[index]){
+            navs[index].click();
+            }
+        }
+        else if (e.keyCode == 40) { //down
+
+            if(projectIndex == null)
+            {
+                $('#centerPage .projectBar')[0].click();
+            }
+        }
+        else if (e.keyCode == 38) { //up
+
+            if(projectIndex == null)
+            {
+                var bars = $('#centerPage .projectBar');
+                if(bars.length > 0){
+                    bars[bars.length - 1].click();
+                }
+            }
         }
     }
-    else if(inWelcomePage && !inProjectPage){
+    else if(inWelcomePage && !inProjectPage){               // in welcome page
 
         if(e.keyCode == 39){
 
             $('.welcomeButtons')[0].click();
         }
     }
+    else if(!inWelcomePage && inProjectPage){               //in project page
+
+        if (e.keyCode == 40) { //down
+
+            if(projectIndex){
+                var nextProj = $('#centerPage .projectBar')[projectIndex+1];
+                
+                if(nextProj){nextProj.click();}
+                else{$('span.close').click();}
+            }
+
+        }
+        else if (e.keyCode == 38) { //up
+
+            if(projectIndex){
+                var nextProj = $('#centerPage .projectBar')[projectIndex-1];
+                
+                if(nextProj){nextProj.click();}
+                else{$('span.close').click();}
+            }
+        }
+    }
+
+
+
+    //EXIT COMMANDS
+
 
     if (e.keyCode == 8 || e.keyCode==27 || e.keyCode==35 || e.keyCode==36) {
         e.preventDefault();
@@ -107,17 +157,20 @@ $( document ).on('click', 'span.close', function(event) {
     $( "#projectDetailsPage" ).animate({left: "100%"}, 700, function() {
         $( "#project-ajaxLoader" ).empty();
         inProjectPage = false;
+        projectIndex = null;
     });
     
 });
 
 $( document ).on('click', '.projectBar', function(event) {
 
-    inProjectPage = true;
 
     var target = $(event.target).closest('.projectBar');
     var nextPageURL = "./Projects/" + target.attr('title').split(' ').join('_') + '/project.html';
     
+    inProjectPage = true;
+    projectIndex = target.index();
+
     $('#loading').css({display:'inherit'});
     $('#project-ajaxLoader').load(nextPageURL, function(garbage, status, xhr ) {
             if ( status == "error" ) {
