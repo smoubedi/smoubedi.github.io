@@ -83,7 +83,8 @@ $(document).keydown(function(e) {
 
             if(projectIndex == null)
             {
-                $('#centerPage .projectBar')[0].click();
+                var nextProj = $('#centerPage .projectBar')[0];
+                if(nextProj){nextProj.click()}
             }
         }
         else if (e.keyCode == 38) { //up
@@ -91,7 +92,7 @@ $(document).keydown(function(e) {
             if(projectIndex == null)
             {
                 var bars = $('#centerPage .projectBar');
-                if(bars.length > 0){
+                if(bars && bars.length > 0){
                     bars[bars.length - 1].click();
                 }
             }
