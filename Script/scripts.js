@@ -106,9 +106,9 @@ $(document).keydown(function(e) {
     }
     else if(!inWelcomePage && inProjectPage){               //in project page
 
-        if (e.keyCode == 40) { //down
+        if (e.keyCode == 39) { //down
 
-            if(projectIndex){
+            if(1 / projectIndex){
                 var nextProj = $('#centerPage .projectBar')[projectIndex+1];
                 
                 if(nextProj){nextProj.click();}
@@ -116,9 +116,9 @@ $(document).keydown(function(e) {
             }
 
         }
-        else if (e.keyCode == 38) { //up
+        else if (e.keyCode == 37) { //up
 
-            if(projectIndex){
+            if(1 / projectIndex){
                 var nextProj = $('#centerPage .projectBar')[projectIndex-1];
                 
                 if(nextProj){nextProj.click();}
