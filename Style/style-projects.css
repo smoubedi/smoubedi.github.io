@@ -95,25 +95,6 @@
 
 
 
-
-
-
-
-#loading{
-    position: fixed;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 75px;
-    width: 75px;
-    //opacity: 0;
-    display: none;
-
-}
-
-
 #projectDetailsPage{
     
     position: fixed;
@@ -131,15 +112,15 @@
 
 
 .close {
-    font-size: 5em;
+    font-size: 6em;
     font-weight: bold;
     line-height: 34px;
     margin: 0.5em;
     z-index: 600;
 
-    color: #000000;
+    color: #A41F1F;
     text-shadow: 0 1px 0 #ffffff;
-    opacity: 0.2;
+    opacity: 0.4;
     filter: alpha(opacity=20);
     text-decoration: none;
 
@@ -148,11 +129,17 @@
     right: 0;
 
     font-family: "Courier New", "Lucida Sans Unicode" , sans-serif, arial;
+
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
 }
 .close:hover {
-    color: #000000;
+    /*color: #000000;*/
     text-decoration: none;
-    opacity: 0.4;
+    opacity: 0.7;
     filter: alpha(opacity=40);
     cursor: pointer;
 }
