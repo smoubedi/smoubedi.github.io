@@ -88,7 +88,6 @@ background-position: 0 -832px!important;
 
 nav { 
     position: relative;
-    float: right;
     width: auto;
 }
 
@@ -111,6 +110,7 @@ nav ul {
     font-size: 0px;
     padding: 0;
     //overflow: hidden;
+    float: right;
 }
 
 nav ul a {
