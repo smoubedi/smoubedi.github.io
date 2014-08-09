@@ -29,8 +29,12 @@ $(document).ready(function() {
 
     if (window.location.hash.indexOf('#') >= 0) {
         var newVal = window.location.hash.split("#/")[1] || '';
-        newVal = (newVal === 'projects') ? 'hardware' : newVal;
         var newVal = newVal.toUpperCase();
+
+        if (newVal === 'PROJECTS') {
+            window.location.hash = "#/hardware";
+            return;
+        }
 
         dealWithHash(newVal);
     }
@@ -59,9 +63,13 @@ window.addEventListener("hashchange", function(hash) {
         dontDoAnything = true;
     }
 
-    var newVal = hash.newURL.split("#/")[1] || 'home';
+    var newVal = window.location.hash.split("#/")[1] || 'home';
     var newVal = newVal.toUpperCase();
 
+    if (newVal === 'PROJECTS') {
+        window.location.hash = "#/hardware";
+        return;
+    }
     if (siteBusy) {
         $("*").finish();
         siteBusy = false;

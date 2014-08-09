@@ -1,15 +1,29 @@
 
 
-html, body { 
-height:100%; 
-width:100%; 
-overflow: visible; 
+html, body {
+
+
+    height: 100%;
+
+
+    width: 100%;
+
+
+    overflow: visible;
+
+
 }
 
+
 html {
+
+
     background-color: #fffcf7;
+
+
     background-color: #333;
-    
+
+
     /*background-image: url("../Images/bg-line-tan.png");
     
     background: url(http://hd.highresolution-wallpapers.net/walls/pc_ware_processor_chip-wide.jpg) no-repeat center center fixed; 
@@ -22,239 +36,573 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;*/
-    
+
+
 }
 
-body{    
+
+body {
+
+
     overflow: hidden;
+
 
     font-family: 'Lato', sans-serif, arial;
+
+
     margin: 0;
+
+
     font-size: 14px;
+
+
     line-height: 32px;
+
+
 }
 
-.cornerTab{
+
+.cornerTab {
+
+
     width: 0px;
+
+
     height: 0px;
+
+
     border-style: solid;
+
+
     border-width: 5em 5em 0 0;
+
+
     border-color: gold transparent transparent transparent;
-    top:0;
+
+
+    top: 0;
+
+
     left: 0;
+
+
     position: absolute;
+
+
     z-index: 100;
+
+
 }
 
-.bodyImageContainer{
+
+.bodyImageContainer {
+
+
     height: 300px;
+
+
     width: auto;
+
+
     overflow: hidden;
+
+
 }
 
-.bodyImage{
+
+.bodyImage {
+
+
     width: 100%;
+
+
 }
 
 
+.mainBody {
 
-.mainBody{
+
     width: 800px;
-    margin-left: auto ;
-    margin-right: auto ;
+
+
+    margin-left: auto;
+
+
+    margin-right: auto;
+
+
     margin-bottom: 10em;
+
+
     margin-top: 5em;
-    
+
+
     word-wrap: break-word;
+
+
     background-color: rgba(255, 252, 247, 0.92);
+
+
     color: #6F675F;
-    
+
+
     top: 0em;
+
+
     position: relative;
 
+
     border-bottom-left-radius: 30px;
+
+
     border-bottom-right-radius: 30px;
+
+
     //border-top-right-radius: 5%;
+
+
     padding-bottom: 2em;
+
 
     overflow: hidden;
 
 
 }
 
-.mainBody-text{
+
+.mainBody-text {
+
+
     font-size: 16px;
+
+
     text-align: center;
+
+
     padding: 2em 5em;
+
+
 }
 
-h1{
-    font-weight: 600; 
+
+h1 {
+
+
+    font-weight: 600;
+
+
     //color: rgb(209, 155, 0);
+
+
     font-size: 2.5em;
+
+
     margin: 0;
+
+
 }
-h3{
-    font-weight: 300; 
+
+
+h3 {
+
+
+    font-weight: 300;
+
+
     color: goldenrod;
+
+
     font-size: 1.2em;
+
+
     margin: 0;
+
+
 }
 
-p{
-    text-align : left
-    color: #6F675F;
-    position:  relative;
+
+p {
+
+
+    text-align: left color: #6F675F;
+
+
+    position: relative;
+
+
 }
 
-.indent{
+
+.indent {
+
+
     /*-webkit-transform: scale(0.6);
     -moz-transform: scale(0.6);
     -o-transform: scale(0.6);
     transform: scale(0.6);*/
-    fill:gold;
+
+
+    fill: gold;
+
+
 }
 
-.mainindent{
+
+.mainindent {
+
 
     height: 100px;
+
+
     width: 50px;
+
+
     position: absolute;
+
+
     left: -3em;
+
+
     top: -1em;
 
+
     -webkit-transform: scale(0.6);
+
+
     -moz-transform: scale(0.6);
+
+
     -o-transform: scale(0.6);
+
+
     transform: scale(0.6);
 
+
 }
 
 
-#mainPages{
+#mainPages {
+
+
     position: fixed;
+
+
     height: 100%;
+
+
     width: 300%;
+
+
     left: -100%;
+
+
     overflow: hidden;
+
+
     top: 5.3em;
+
+
 }
 
-.ajaxLoader{
+
+.ajaxLoader {
+
+
     width: 33.33333333333%;
+
+
     width: calc(1/3 * 100%);
 
+
     height: 100%;
+
+
     display: inline-block;
+
+
     position: absolute;
+
+
     z-index: 1;
+
+
     overflow-x: hidden;
 
+
     -webkit-touch-callout: none;
+
+
     -webkit-user-select: none;
+
+
     -khtml-user-select: none;
+
+
     -moz-user-select: none;
+
+
     -ms-user-select: none;
+
+
     user-select: none;
-    
+
+
 }
 
 
-#leftPage{
+#leftPage {
+
+
     left: 0;
+
+
     left: calc(0/3 * 100%);
+
+
 }
-#centerPage{
+
+
+#centerPage {
+
+
     left: 33.33333333333%;
+
+
     left: calc(1/3 * 100%);
+
+
 }
-#rightPage{
+
+
+#rightPage {
+
+
     left: 66.66666666666%;
+
+
     left: calc(2/3 * 100%);
+
+
 }
 
 
+#loading {
 
 
-
-
-#loading{
     position: fixed;
+
+
     margin: auto;
+
+
     left: 0;
+
+
     right: 0;
+
+
     top: 0;
+
+
     bottom: 0;
+
+
     height: 75px;
+
+
     width: 75px;
+
+
     display: none !important;
-    
+
+
     -webkit-transition: all 250ms ease;
+
+
     -moz-transition: all 250ms ease;
+
+
     -ms-transition: all 250ms ease;
+
+
     -o-transition: all 250ms ease;
+
+
     transition: all 250ms ease;
+
+
 }
-#loading_BG{
+
+
+#loading_BG {
+
+
     background-color: black;
+
+
     opacity: 0.5;
+
+
     width: 100%;
+
+
     height: 100%;
+
+
     position: fixed;
+
+
     top: 0;
+
+
     left: 0;
+
+
     z-index: -1;
-} 
+
+
+}
+
 
 .spinner {
-  width: 60px;
-  height: 100px;
-  text-align: center;
-  font-size: 10px;
+
+
+    width: 60px;
+
+
+    height: 100px;
+
+
+    text-align: center;
+
+
+    font-size: 10px;
+
+
 }
+
 
 .spinner > div {
-  /*background-color: gold;*/
-  height: 100%;
-  width: 6px;
-  display: inline-block;
-  
-  -webkit-animation: stretchdelay 0.8s infinite ease-in-out;
-  animation: stretchdelay 0.8s infinite ease-in-out;
+
+
+    /*background-color: gold;*/
+
+
+    height: 100%;
+
+
+    width: 6px;
+
+
+    display: inline-block;
+
+
+    -webkit-animation: stretchdelay 0.8s infinite ease-in-out;
+
+
+    animation: stretchdelay 0.8s infinite ease-in-out;
+
+
 }
+
 
 .spinner .rect2 {
-  -webkit-animation-delay: -0.7s;
-  animation-delay: -0.7s;
+
+
+    -webkit-animation-delay: -0.7s;
+
+
+    animation-delay: -0.7s;
+
+
 }
+
 
 .spinner .rect3 {
-  -webkit-animation-delay: -0.6s;
-  animation-delay: -0.6s;
+
+
+    -webkit-animation-delay: -0.6s;
+
+
+    animation-delay: -0.6s;
+
+
 }
+
 
 .spinner .rect4 {
-  -webkit-animation-delay: -0.5s;
-  animation-delay: -0.5s;
+
+
+    -webkit-animation-delay: -0.5s;
+
+
+    animation-delay: -0.5s;
+
+
 }
+
 
 .spinner .rect5 {
-  -webkit-animation-delay: -0.4s;
-  animation-delay: -0.4s;
+
+
+    -webkit-animation-delay: -0.4s;
+
+
+    animation-delay: -0.4s;
+
+
 }
+
 
 @-webkit-keyframes stretchdelay {
-  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
-  20% { -webkit-transform: scaleY(1.0) }
+
+
+    0%, 40%, 100% {
+
+
+        -webkit-transform: scaleY(0.4)
+
+
+    }
+
+
+    20% {
+
+
+        -webkit-transform: scaleY(1.0)
+
+
+    }
+
+
 }
+
 
 @keyframes stretchdelay {
-  0%, 40%, 100% { 
-    transform: scaleY(0.4);
-    -webkit-transform: scaleY(0.4);
-  }  20% { 
-    transform: scaleY(1.0);
-    -webkit-transform: scaleY(1.0);
-  }
-}
 
+
+    0%, 40%, 100% {
+
+
+        transform: scaleY(0.4);
+
+
+        -webkit-transform: scaleY(0.4);
+
+
+    }
+
+
+    20% {
+
+
+        transform: scaleY(1.0);
+
+
+        -webkit-transform: scaleY(1.0);
+
+
+    }
+
+
+}

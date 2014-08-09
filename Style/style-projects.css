@@ -1,21 +1,16 @@
-.projectMainBody{
- 
+.projectMainBody {
     background: transparent;
     margin-top: 10em;
     //margin-bottom: 0;
-
     position: absolute;
     left: 6.5em;
     right: 6.5em;
     min-width: 300px;
-        
 }
-
-.header{
+.header {
     color: white;
     height: 120px;
     border-top: 0.2em solid gold;
-    
     width: 940px;
     margin-left: auto;
     margin-right: auto;
@@ -26,47 +21,36 @@
     margin-top: 3em;
     min-width: 300px;
 }
-
-.header > .cornerTab{
-    position: relative;   
+.header > .cornerTab {
+    position: relative;
     z-index: 0;
 }
-
-.header > h1{
-    
+.header > h1 {
     position: absolute;
     left: 1.5em;
     top: 0.1em;
     font-size: 3.1em;
 }
-.header > h3{
-    
+.header > h3 {
     position: absolute;
     left: 1.5em;
-    top: 1.5em; 
+    top: 1.5em;
     color: rgb(219, 215, 196);
     font-size: 1.6em;
-
 }
-
-.projectBar{
-    
+.projectBar {
     width: 100%;
     height: 150px;
     overflow: hidden;
     margin-bottom: 2em;
     border-top: 0.1em solid goldenrod;
     position: relative;
-    background-color:  black;
-    
+    background-color: black;
 }
-
-.projectBar:hover{
-    cursor: pointer;   
+.projectBar:hover {
+    cursor: pointer;
 }
-
-
-.projectBar>img{
+.projectBar>img {
     width: calc(100% - 7em);
     min-height: 100%;
     position: absolute;
@@ -75,8 +59,6 @@
     bottom: 0;
     margin: auto;
 }
-
-
 .projectBar:after {
     background-color: black;
     width: 7em;
@@ -84,7 +66,7 @@
     position: absolute;
     /* top: -5px; */
     /* left: -5px; */
-    content: attr(title) '';
+    content: attr(title)'';
     color: beige;
     font-size: 1.3em;
     line-height: 24px;
@@ -92,44 +74,34 @@
     padding: 1em 0 0 1em;
     box-shadow: 3.0em -5em 110px #000;
 }
-
-
-
-#projectDetailsPage{
-    
+#projectDetailsPage {
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     bottom: 0;
     left: 100%;
-
     background-color: rgba(255, 252, 247, 1);
     z-index: 500;
     //transition: left 0.7s;
-   //overflow: auto;
+    //overflow: auto;
+
 }
-
-
 .close {
     font-size: 6em;
     font-weight: bold;
     line-height: 34px;
     margin: 0.5em;
     z-index: 600;
-
     color: #A41F1F;
     text-shadow: 0 1px 0 #ffffff;
     opacity: 0.4;
     filter: alpha(opacity=20);
     text-decoration: none;
-
     position: absolute;
     top: 0;
     right: 0;
-
-    font-family: "Courier New", "Lucida Sans Unicode" , sans-serif, arial;
-
+    font-family: "Courier New", "Lucida Sans Unicode", sans-serif, arial;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
@@ -143,14 +115,11 @@
     filter: alpha(opacity=40);
     cursor: pointer;
 }
-#project-ajaxLoader{
-
+#project-ajaxLoader {
     height: 100%;
     overflow: auto;
 }
-
-#project-ajaxLoader img, video{
+#project-ajaxLoader img, video {
     max-width: 100%;
     max-height: 100%;
 }
-
