@@ -399,6 +399,37 @@ $(document).on('click', '.at4-arrow', function(event) {
     }
 });
 
+//SWIPE DETECTION
+swipedetect(document, function(swipedir) {
+    if (!inWelcomePage && !inProjectPage) { //in main page
+
+        var navs = $('.navs');
+
+        if (swipedir === 'right') { // left
+            var index = centerIndex - 1;
+
+            if (navs[index]) {
+                navs[index].click();
+            }
+        } else if (swipedir === 'left') { // right
+            var index = centerIndex + 1;
+
+            if (navs[index]) {
+                navs[index].click();
+            }
+        }
+    } else if (inWelcomePage) { // in welcome page
+
+        if (swipedir === 'left') {
+            $('.welcomeButtons')[0].click();
+        }
+    } else if (inProjectPage) { // in welcome page
+
+        if (swipedir === 'right') {
+            closeProjectPage();
+        }
+    }
+});
 
 // KEY PRESS EVENTS
 /*
