@@ -1,24 +1,32 @@
- <div class="mainBody width-hunnid">
+<div class="mainBody width-hunnid">
     <div class="mainBody-text" style="text-align: left">
         
         <h1>SOUND-REACTIVE LIGHTS
         </h1>
         
-        <h3>PROJECT</h3>
+        <h3>PERSONAL PROJECT</h3>
         <p>
             <svg class='mainindent'><g class='indent'><polygon points="0,0  50,50  0,100  0,70  20,50  0,30"/></g></svg>
 
-            The sound reactive lighting system is a circuit which connects to an analog audio input signal - typically the 3.5mm audio jack, and uses that signal to drive a set of LED's to the beat of the music. This circuit is now fully on PCB and can be seen in the following video:
+            The sound reactive light system is a fully analog circuit which connects to any 3.5mm headphone jack for an audio signal, and drives an array of LED's accordingly. 
+            <br><br>
+            The aim is for the lights to react only to the beat of the music, and thus the circuit design incorporates a variable band pass filter set to pass through solely the bass notes. At its tightest settings, the circuit will respond to audio frequencies from 7Hz to 200Hz. At its loosest setting, the the filter will pass signals up to roughly ~17 kHz which is around the limit of the human ear. This range is useful for listening to treble heavy music such as classical or vocals or lower quality sources.
+            <br><br>
+            This circuit is now fabbed on PCB and you can see it in all its glory here:
+
             <br><br>
             <iframe width="576" height="418" src="//www.youtube.com/embed/AbmEjAgjOjU" frameborder="0" allowfullscreen></iframe>
             <br>
             <a class="fancybox" rel="group" href="/Projects/SOUND_REACTIVE_LIGHTS/Images/SoundReact-breadbord.jpg"><img src="/Projects/SOUND_REACTIVE_LIGHTS/Images/SoundReact-breadbord-thumb.jpg"></a>
             <br><br>
-            The circuit design incorporates an amplifier with a variable band pass filter. At its tightest settings, the circuit will only respond to audio frequencies from 7Hz to 200Hz. This ensures that the lights only blink to the bass of the music which is essentially its tempo. At its loosest setting, the highest passing frequence it accepts is ~17 kHz which is around the limit of the human ear. This range is useful for listening to treble heavy music such as classical or vocals.
+            
+            The biggest challenge that I faced when designing this was reducing visible flickering. At roughly 15-20 Hz, my eyes could easily notice the LEDs flickering and was an eye sore. This was troublesome for me because a good DAC such as the audio card used in my desktop PC will easily generate frequencies well below 20Hz and even reach 0.5Hz. What’s worse is that electronic genres of music typically occupy this spectrum because they are digitally synthesized and non-audible. To combat this problem, using a combination of filters and a rectifier to smooth the output. Firstly, the high pass filter on the front end ensured that frequencies lower than roughly 7Hz would get cut off. After amplification, the signal would be sent through a full wave rectifier which would essentially double the frequency. Finally, it would go through a smoothing low pass filter which would ideally output solely the DC-Vrms of the audio signal.
             <br><br>
-            The high pass filter as well as a full wave rectifier and capacitors work together to remove the very low frequencies less than 7 Hz. These frequencies will simply cause the LED's to blink which is unfavourable.
+            <a class="fancybox" rel="group" href="/Projects/SOUND_REACTIVE_LIGHTS/Images/block_diagram.jpg"><img src="/Projects/SOUND_REACTIVE_LIGHTS/Images/block_diagram.jpg"></a>
             <br><br>
-            The power supply is a regulated 12 volt power adapter rated for 5 Watts which is then split to +/- 6V, and the input can use various audio channels. The circuit has  3 modes of operation: Off, Sound Reactive, Constant On. 
+            Another challenge that I faced was being able to source the current needed by the 20+ LEDs found in the array. Each LED was rated for a nominal current draw of 10mA which summed up to roughly 200mA for the entire array, and more if I planned to add LEDs later down the line. The ancient LM741 amplifier I was using for this task simply did not have the output current capabilities to support a project like this. The only other options I had were to either build a discrete amplifier (which was extremely difficult at the time given my lack of equipment) or to buy an expensive beefy op amp. Neither of these options were truly viable and since I had a handful of 741s available, my final inelegant solution was to use 5 op amps in parallel.
+            <br><br>
+            The power supply used was an external regulated wall adapter, outputting a 12 Volt rail rated at 5 Watts. A virtual ground was generated using a simple resistor divider technique giving the system +/- 6V rails for the op amps. Finally, the system has 3 modes of operation - Off (Cutting off the main power rail), Sound Reactive Mode (Connecting the main power rail), and Fully On Mode (saturating the amplifiers).
             <br><br>
             <a class="fancybox" rel="group" href="/Projects/SOUND_REACTIVE_LIGHTS/Images/eagle-schematic.PNG"><img src="/Projects/SOUND_REACTIVE_LIGHTS/Images/eagle-schematic.PNG"></a>
             <br><br>
